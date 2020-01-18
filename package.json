@@ -1,12 +1,12 @@
 {
-  "name": "eleventy-starter",
+  "name": "11ty-basic-starter",
   "version": "0.1.0",
-  "description": "An 11ty starter project.",
-  "author": "Ryan Scherler",
+  "description": "A blog-ready 11ty starter based on PostCSS, width RSS feed clean structure.",
+  "author": "Mattia Astorino",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eastslopestudio/eleventy-starter"
+    "url": "https://github.com/equinusocio/11ty-basic-starter"
   },
   "scripts": {
     "clean": "run-s clean:*",
@@ -18,7 +18,7 @@
     "watch": "run-p watch:*",
     "watch:html": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve --port=8080",
     "watch:assets": "cross-env NODE_ENV=development npx parcel watch ./src/assets/css/app.css ./src/assets/js/app.js --out-dir ./dist/assets --no-source-maps --no-hmr",
-    "start": "npm run watch"
+    "start": "yarn watch"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
