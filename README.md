@@ -1,9 +1,8 @@
-# Eleveny Starter
+# XITI Starter
 
-A project scaffold for quickly starting a site build with:
+A blog-ready 11ty starter based on PostCSS, width RSS feed clean structure.
 
 - [Eleventy](https://11ty.dev) for templates and site generation
-- [Tailwindcss](https://tailwindcss.com) for a utility first CSS workflow
 - [PurgeCSS](https://www.purgecss.com/) for optimizing css output
 - [Parcel JS](https://parceljs.org) for a simple asset build pipeline
 
