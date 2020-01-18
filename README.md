@@ -24,9 +24,3 @@ yarn start
 # run the production build
 yarn build
 ```
-
-### Redirects and proxies
-
-Netlify's Redirects API can provide friendlier URLs as proxies to these URLs.
-
-- /api/hello
