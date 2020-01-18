@@ -1,4 +1,6 @@
 const { DateTime } = require('luxon')
+const htmlMinTransform = require('./transforms/htmlmin.js');
+
 
 module.exports = function(eleventyConfig) {
   /**
@@ -38,7 +40,7 @@ module.exports = function(eleventyConfig) {
    * @link https://www.11ty.io/docs/config/#transforms
    */
   if (process.env.ELEVENTY_ENV === 'production') {
-    eleventyConfig.addTransform('htmlmin', require('./src/utils/htmlmin.js'))
+    eleventyConfig.addTransform('htmlmin', htmlMinTransform)
   }
 
   /**
@@ -61,7 +63,6 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: 'src/site',
-      layouts: '_layouts',
       output: 'dist',
     },
     passthroughFileCopy: true,

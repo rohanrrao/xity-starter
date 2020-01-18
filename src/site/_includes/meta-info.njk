@@ -1,0 +1,44 @@
+{% set pageTitle = title + ' - ' + config.name %}
+{% set pageDesc = '' %}
+{% set siteTitle = config.name %}
+{% set currentUrl = config.url + page.url %}
+
+{% if metaTitle %}
+  {% set pageTitle = metaTitle %}
+{% endif %}
+
+{% if metaDesc %}
+  {% set pageDesc = metaDesc %}
+{% endif %}
+
+<title>{{ pageTitle }}</title>
+<link rel="canonical" href="{{ currentUrl }}" />
+
+<meta property="og:site_name" content="{{ siteTitle }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
+<meta property="twitter:url" content="{{ currentUrl }}" />
+<meta property="twitter:site" content="{{ siteTitle }}" />
+
+{% if config.authorHandle %}
+  <meta name="twitter:creator" content="@{{ config.authorHandle | replace('@', '') }}" />
+{% endif %}
+
+{% if metaDesc %}
+  <meta name="description" content="{{ metaDesc }}" />
+  <meta name="twitter:description" content="{{ metaDesc }}" />
+  <meta property="og:description" content="{{ metaDesc }}" />
+{% endif %}
+
+{% if socialImage %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="{{ socialImage }}" />
+  <meta name="twitter:image" content="{{ socialImage }}" />
+  <meta property="og:image:alt" content="Page image for {{ config.name }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ config.name }}" />
+{% endif %}
+
+{% if config.paymentPointer %}
+  <meta name="monetization" content="{{ config.paymentPointer }}" />
+{% endif %}

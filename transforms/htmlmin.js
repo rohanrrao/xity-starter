@@ -6,6 +6,7 @@ module.exports = function(content, outputPath) {
       useShortDoctype: true,
       removeComments: true,
       collapseWhitespace: true,
+      minifyCSS: true
     })
     return minified
   }
