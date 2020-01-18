@@ -23,7 +23,7 @@ You can download the scaffolding and start a new project with just one command:
 npx degit https://github.com/equinusocio/xity-starter
 ```
 
-This command will copy the scaffolding to your corrent working directory. Then you can install the required dependencies:
+This command will copy the project to your corrent working directory. Then you can install the required dependencies:
 
 ```bash
 yarn install
