@@ -12,7 +12,6 @@ module.exports = {
     require('postcss-preset-env')({
       stage: 0,
     }),
-    require('autoprefixer'),
     ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
     require('postcss-reporter')({
       clearReportedMessages: true
