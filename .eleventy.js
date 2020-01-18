@@ -56,6 +56,8 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: 'src',
+      includes: 'components',
+      layouts: 'components/layouts',
       output: 'dist',
     },
     passthroughFileCopy: true,
