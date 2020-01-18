@@ -1,4 +1,4 @@
 [{
   "action": "remove",
-  "files": [".github/"]
+  "files": [".github"]
 }]
