@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
    *
    * @link https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
-  eleventyConfig.addWatchTarget('./assets')
+  eleventyConfig.addWatchTarget('./assets/')
 
   /**
    * Passthrough file copy
