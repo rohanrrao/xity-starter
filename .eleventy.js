@@ -1,7 +1,9 @@
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const htmlMinTransform = require('./utils/transforms/htmlmin.js')
 const htmlDate = require('./utils/filters/htmlDate.js')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const date = require('./utils/filters/date.js')
+const fs = require('fs')
 
 /**
  * Import site configuration
@@ -14,7 +16,7 @@ module.exports = function(eleventyConfig) {
    *
    * @link https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
-  eleventyConfig.addWatchTarget('./assets/')
+  eleventyConfig.addWatchTarget('./assets')
 
   /**
    * Passthrough file copy
@@ -22,6 +24,7 @@ module.exports = function(eleventyConfig) {
    * @link https://www.11ty.io/docs/copy/
    */
   eleventyConfig.addPassthroughCopy({ './static': '.' })
+  eleventyConfig.addPassthroughCopy(`./assets/css/${siteConfig.syntaxTheme}`)
 
   /**
    * Add filters
@@ -45,8 +48,10 @@ module.exports = function(eleventyConfig) {
   /**
    * Add Plugins
    */
-  // https://github.com/11ty/eleventy-plugin-rss
+  // Add rss generation: https://github.com/11ty/eleventy-plugin-rss
   eleventyConfig.addPlugin(rssPlugin)
+  // Add code syntax highlight: https://github.com/11ty/eleventy-plugin-syntaxhighlight
+  eleventyConfig.addPlugin(syntaxHighlight)
 
   /**
    * Create custom data collections
@@ -59,7 +64,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('posts', collection => {
     return [
       ...collection
-        .getFilteredByGlob(`./${siteConfig.paths.blogdir}/*.md`)
+        .getFilteredByGlob(
+          `./${siteConfig.paths.src}/${siteConfig.paths.blogdir}/*.md`
+        )
         .filter(livePosts),
     ].reverse()
   })
@@ -80,6 +87,18 @@ module.exports = function(eleventyConfig) {
         },
       },
     },
+    // Set local server 404 fallback
+    callbacks: {
+      ready: function(err, browserSync) {
+        const content_404 = fs.readFileSync('dist/404.html')
+
+        browserSync.addMiddleware('*', (req, res) => {
+          // Provides the 404 content without redirect.
+          res.write(content_404)
+          res.end()
+        })
+      },
+    },
   })
 
   /**
@@ -87,9 +106,9 @@ module.exports = function(eleventyConfig) {
    */
   return {
     dir: {
-      input: siteConfig.paths.input,
+      input: siteConfig.paths.src,
       includes: siteConfig.paths.includes,
-      layouts: siteConfig.paths.layouts,
+      layouts: `${siteConfig.paths.includes}/layouts`,
       output: siteConfig.paths.output,
     },
     passthroughFileCopy: true,

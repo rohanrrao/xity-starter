@@ -7,7 +7,7 @@ import Turbolinks from 'turbolinks'
 import HelloController from './controllers/hello_controller'
 
 /**
- * Init Simulus framework
+ * Init Simulus library
  */
 const application = Application.start()
 

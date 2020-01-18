@@ -7,11 +7,11 @@
   "authorName": "Mattia Astorino",
   "maxPostsPerPage": 5,
   "paymentPointer": "$twitter.xrptipbot.com/equinusocio",
+  "syntaxTheme": "prism-material-light.css",
   "paths": {
-    "input": "src",
+    "src": "src",
+    "blogdir": "blog",
     "includes": "components",
-    "layouts": "components/layouts",
-    "output": "dist",
-    "blogdir": "src/blog"
+    "output": "dist"
   }
 }
