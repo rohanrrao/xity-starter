@@ -1,6 +1,6 @@
-const { DateTime } = require('luxon')
-const htmlMinTransform = require('./transforms/htmlmin.js');
-
+const htmlMinTransform = require('./utils/transforms/htmlmin.js')
+const htmlDate = require('./utils/filters/htmlDate.js')
+const date = require('./utils/filters/date.js')
 
 module.exports = function(eleventyConfig) {
   /**
@@ -8,31 +8,24 @@ module.exports = function(eleventyConfig) {
    *
    * @link https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
-  eleventyConfig.addWatchTarget('./src/assets/')
+  eleventyConfig.addWatchTarget('./assets/')
 
   /**
    * Passthrough file copy
    *
    * @link https://www.11ty.io/docs/copy/
    */
-  eleventyConfig.addPassthroughCopy({ './src/static': '.' })
+  eleventyConfig.addPassthroughCopy({ './static': '.' })
 
   /**
    * Add filters
    *
    * @link https://www.11ty.io/docs/filters/
    */
-  eleventyConfig.addFilter('readableDate', dateObj => {
-    return DateTime.fromJSDate(dateObj, {
-      zone: 'utc',
-    }).toFormat('LLLL d, y')
-  })
-
-  eleventyConfig.addFilter('htmlDate', dateObj => {
-    return DateTime.fromJSDate(dateObj, {
-      zone: 'utc',
-    }).toFormat('y-MM-dd')
-  })
+  // human friendly date format
+  eleventyConfig.addFilter('dateFilter', date)
+  // robot friendly date format for crawlers
+  eleventyConfig.addFilter('htmlDate', htmlDate)
 
   /**
    * Add Transforms
@@ -62,7 +55,7 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: 'src/site',
+      input: 'src',
       output: 'dist',
     },
     passthroughFileCopy: true,
