@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/equinusocio/11ty-basic-starter"
+    "url": "https://github.com/equinusocio/xity-starter"
   },
   "scripts": {
     "clean": "run-s clean:*",
@@ -39,5 +39,11 @@
     "postcss-reporter": "^6.0.1",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0"
-  }
+  },
+  "browserslist": [
+    "last 1 Chrome versions",
+    "last 1 Firefox versions",
+    "last 1 Safari versions",
+    "last 1 Edge versions"
+  ]
 }
