@@ -37,7 +37,7 @@ This command will run `parcel` and the local server (with [BrowserSync](https://
 yarn start
 ```
 
-### Ditributing
+### Distributing
 
 TO generate your static site/blog you can run this command to prepare assets and run optimisations for production.
 
