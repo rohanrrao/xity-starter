@@ -9,13 +9,13 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 
 module.exports = {
   plugins: [
-    require('postcss-preset-env'){
+    require('postcss-preset-env')({
       stage: 0,
-    },
+    }),
     require('autoprefixer'),
     ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
-    require('postcss-reporter'){
+    require('postcss-reporter')({
       clearReportedMessages: true
-    },
+    }),
   ],
 }
