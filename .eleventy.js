@@ -1,6 +1,12 @@
 const htmlMinTransform = require('./utils/transforms/htmlmin.js')
 const htmlDate = require('./utils/filters/htmlDate.js')
+const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const date = require('./utils/filters/date.js')
+
+/**
+ * Import site configuration
+ */
+const siteConfig = require('./src/_data/config.json')
 
 module.exports = function(eleventyConfig) {
   /**
@@ -37,12 +43,34 @@ module.exports = function(eleventyConfig) {
   }
 
   /**
+   * Add Plugins
+   */
+  // https://github.com/11ty/eleventy-plugin-rss
+  eleventyConfig.addPlugin(rssPlugin)
+
+  /**
+   * Create custom data collections
+   * for blog and feed
+   * Code from https://github.com/hankchizljaw/hylia
+   */
+  // Blog posts collection
+  const now = new Date()
+  const livePosts = post => post.date <= now && !post.data.draft
+  eleventyConfig.addCollection('posts', collection => {
+    return [
+      ...collection
+        .getFilteredByGlob(`./${siteConfig.paths.blogdir}/*.md`)
+        .filter(livePosts),
+    ].reverse()
+  })
+
+  /**
    * Override BrowserSync Server options
    *
    * @link https://www.11ty.dev/docs/config/#override-browsersync-server-options
    */
   eleventyConfig.setBrowserSyncConfig({
-    notify: true,
+    notify: false,
     snippetOptions: {
       rule: {
         match: /<\/head>/i,
@@ -53,12 +81,15 @@ module.exports = function(eleventyConfig) {
     },
   })
 
+  /**
+   * Eleventy configuration object
+   */
   return {
     dir: {
-      input: 'src',
-      includes: 'components',
-      layouts: 'components/layouts',
-      output: 'dist',
+      input: siteConfig.paths.input,
+      includes: siteConfig.paths.includes,
+      layouts: siteConfig.paths.layouts,
+      output: siteConfig.paths.output,
     },
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md'],

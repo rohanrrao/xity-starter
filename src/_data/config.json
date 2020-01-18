@@ -5,5 +5,12 @@
   "authorHandle": "@equinusocio",
   "authorName": "Mattia Astorino",
   "maxPostsPerPage": 5,
-  "paymentPointer": "$twitter.xrptipbot.com/equinusocio"
+  "paymentPointer": "$twitter.xrptipbot.com/equinusocio",
+  "paths": {
+    "input": "src",
+    "includes": "components",
+    "layouts": "components/layouts",
+    "output": "dist",
+    "blogdir": "src/blog"
+  }
 }
