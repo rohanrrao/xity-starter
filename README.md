@@ -1,4 +1,4 @@
-# XITI Starter
+# XIty Starter
 
 A blog-ready 11ty starter based on PostCSS, width RSS feed clean structure.
 
