@@ -1,9 +1,5 @@
 const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: [
-    './src/assets/js/**/*.js',
-    './src/site/**/*.njk',
-    './src/site/**/*.md',
-  ],
+  content: ['./assets/js/**/*.js', './src/**/*.njk', './src/**/*.md'],
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
 })
 
@@ -14,7 +10,7 @@ module.exports = {
     }),
     ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
     require('postcss-reporter')({
-      clearReportedMessages: true
+      clearReportedMessages: true,
     }),
   ],
 }
