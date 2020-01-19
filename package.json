@@ -22,7 +22,6 @@
     "start": "yarn watch"
   },
   "dependencies": {
-    "stimulus": "^1.1.1",
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
