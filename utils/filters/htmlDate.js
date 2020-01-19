@@ -1,7 +1,5 @@
-const { DateTime } = require('luxon')
+module.exports = function(value) {
+  const dateObject = new Date(value)
 
-module.exports = function(dateObj) {
-  return DateTime.fromJSDate(dateObj, {
-    zone: 'utc',
-  }).toFormat('y-MM-dd')
+  return dateObject.toISOString()
 }
