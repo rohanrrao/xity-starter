@@ -2,5 +2,8 @@
   "emmet.includeLanguages": {
     "njk": "html",
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "markdownlint.config": {
+    "MD033": false
+  }
 }
