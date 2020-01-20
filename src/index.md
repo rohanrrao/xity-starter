@@ -5,8 +5,10 @@ title: XITY Starter
 
 **XITY** is a basic starter blog/site for Eleventy. Here some features:
 
+---
+
 - 📰 RSS Feed
-- 💅 [**PostCSS**](https://postcss.org) with [**PostCSS Preset Env**](https://preset-env.cssdb.org)
+- 💅 [**PostCSS**](https://postcss.org) with [**Preset Env**](https://preset-env.cssdb.org) and [**Purge**](https://purgecss.com) to enhance and clean your css.
 - 🏅 No <abbr title="Cascade Style Sheet">CSS</abbr> or <abbr title="Javascript">JS</abbr> frameworks to remove. Just add what you need.
 - 📝 Basic blog structure
 - ⚙️ Configuration file to set meta and global settings
