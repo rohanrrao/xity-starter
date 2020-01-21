@@ -19,7 +19,7 @@
     "watch": "cross-env ELEVENTY_ENV=development run-s clean:* && run-p watch:*",
     "watch:html": "eleventy --serve --port=8080",
     "watch:assets": "parcel watch ./assets/css/app.pcss ./assets/js/app.js --out-dir ./dist/assets --no-source-maps --no-hmr",
-    "start": "yarn watch"
+    "dev": "yarn watch"
   },
   "dependencies": {
     "turbolinks": "^5.2.0"

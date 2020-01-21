@@ -3,9 +3,11 @@ layout: 'home'
 title: XITY Starter
 ---
 
-**XITY** is a basic starter blog/site for Eleventy. Here some features:
+**XITY** (roman version of 11ty) is a basic starter blog/site for Eleventy. You will find just some basic tools to start your project, no frameworks, no extra css and html, nothing to clean. **Just start from here**.
 
 ---
+
+Here some key features:
 
 - 📰 RSS Feed
 - 💅 [**PostCSS**](https://postcss.org) with [**Preset Env**](https://preset-env.cssdb.org) and [**Purge**](https://purgecss.com) to enhance and clean your css.
@@ -15,7 +17,7 @@ title: XITY Starter
 - 🎨 Code highlight which you can disable with a flag
 - 🗜 [**Native Elements**](https://native-elements.stackblitz.io) integration (it's just an external css resource)
 
-### Sample blog post
+### Sample blog posts
 
 [code](/blog/a-post-with-code-samples)
 [video](/blog/a-post-with-figures-and-video)
