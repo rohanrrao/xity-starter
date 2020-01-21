@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-  <main id="main-content" tabindex="-1">
+  <main tabindex="-1">
     {% if date %}
       <time datetime="{{ date | htmlDate }}" class="dt-published">{{ date | dateFilter }}</time>
     {% endif %}
