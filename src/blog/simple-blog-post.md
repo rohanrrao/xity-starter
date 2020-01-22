@@ -1,13 +1,13 @@
 ---
-title: A simple post
-date: '2019-06-18'
+title: Simple blog post
+date: '2020-01-22'
 tags:
-  - demo-content
-  - simple-post
+  - sample-content
+  - code
   - blog
 ---
 
-A simple post to demonstrate how a normal blog post looks on Hylia. Content is all set in the “Body” field as markdown and Eleventy transforms it into a proper HTML post. You can also edit the markdown file directly if you prefer not to use the CMS.
+This is a sample blog post to demostrate how posts look with Native Elements. All the content of this article is inside a markdown file which is transformed by Eleventy into an HTML page.
 
 ```js
 function myFunction() {
