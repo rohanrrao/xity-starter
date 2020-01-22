@@ -1,3 +1,7 @@
+:root {
+  --ne-global-background: #fff;
+}
+
 body {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
@@ -5,7 +9,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  padding: 0 32px;
+  padding: 0;
 }
 
 main {
@@ -19,4 +23,9 @@ main {
 
 ul {
   padding-left: 0;
+}
+
+a[aria-current='page'],
+a[aria-current='page']:hover {
+  color: var(--ne-global-foreground);
 }

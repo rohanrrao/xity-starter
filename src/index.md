@@ -27,9 +27,10 @@ Here some key features:
 
 <br style="line-height: 100px;" />
 
-### What's next?
+## What's next?
 
 - Tags and tags collections
+- Service Worker
 
 ---
 
