@@ -31,10 +31,3 @@ Here some key features:
 
 - Tags and tags collections
 - Service Worker
-
----
-
-## Sample blog posts
-
-[Saple Post](/blog/simple-blog-post)
-[video](/blog/a-post-with-figures-and-video)

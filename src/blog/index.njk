@@ -1,3 +1,5 @@
-<h1>Blog index</h1>
+{% include "header.njk" %}
 
-Lorem ipsum dolor sit amet
+<h1>Blog</h1>
+{% set postList = collections.posts %}
+{% include "posts.njk" %}
