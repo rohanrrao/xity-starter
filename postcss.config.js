@@ -3,9 +3,16 @@ module.exports = {
     require('postcss-preset-env')({
       stage: 0,
     }),
-    require('@fullhuman/postcss-purgecss')({
-      content: ['./assets/js/**/*.js', './src/**/*.njk', './src/**/*.md'],
-      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+    require('cssnano')({
+      preset: [
+        'advanced',
+        {
+          discardComments: {
+            removeAll: true,
+          },
+          reduceIdents: false,
+        },
+      ],
     }),
     require('postcss-reporter')({
       clearReportedMessages: true,

@@ -10,9 +10,11 @@
 
 {% block content %}
   <main tabindex="-1">
+    {% include "header.njk" %}
     {% if date %}
       <time datetime="{{ date | htmlDate }}">{{ date | dateFilter }}</time>
     {% endif %}
+    <h1>{{ title }}</h1>
     <article>
       {{ content | safe }}
       {% if tags %}

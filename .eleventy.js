@@ -68,9 +68,7 @@ module.exports = function(eleventyConfig) {
           `./${siteConfig.paths.src}/${siteConfig.paths.blogdir}/*.md`
         )
         .filter(livePosts),
-    ]
-      .reverse()
-      .slice(0, eleventyConfig.maxPostsPerPage)
+    ].reverse()
   })
 
   /**

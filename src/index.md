@@ -11,7 +11,7 @@ Here some key features:
 
 📰 Integrated RSS Feed.
 
-💅 [**PostCSS**](https://postcss.org) with [**Preset Env**](https://preset-env.cssdb.org) and [**Purge**](https://purgecss.com) to enhance and clean your css.
+💅 [**PostCSS**](https://postcss.org) with [**Preset Env**](https://preset-env.cssdb.org) and [**CssNano**](https://cssnano.co) to enhance and clean your css.
 
 🏅 No <abbr title="Cascade Style Sheet">CSS</abbr> or <abbr title="Javascript">JS</abbr> frameworks to remove. Just add what you need.
 
