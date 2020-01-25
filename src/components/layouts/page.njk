@@ -6,6 +6,12 @@
     {% if title %}
       <h1>{{ title }}</h1>
     {% endif %}
+
+    {% if showPosts %}
+      {% set postList = collections.posts %}
+      {% include "posts.njk" %}
+    {% endif %}
+
     {{ content | safe }}
   </main>
 {% endblock %}

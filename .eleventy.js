@@ -1,5 +1,6 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const htmlMinTransform = require('./utils/transforms/htmlmin.js')
+const contentParser = require('./utils/transforms/contentParser.js')
 const htmlDate = require('./utils/filters/htmlDate.js')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const date = require('./utils/filters/date.js')
@@ -44,6 +45,7 @@ module.exports = function(eleventyConfig) {
   if (process.env.ELEVENTY_ENV === 'production') {
     eleventyConfig.addTransform('htmlmin', htmlMinTransform)
   }
+  eleventyConfig.addTransform('contentParser', contentParser)
 
   /**
    * Add Plugins
