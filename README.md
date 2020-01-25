@@ -2,7 +2,7 @@
 
 A blog-ready 11ty starter based on PostCSS and Parcel, width RSS feed and Native Elements.
 
-## Preconfigured tools
+## Preconfigured development tools
 
 - [Eleventy](https://11ty.dev) for templates and site generation
 - [PostCSS](https://postcss.org) and [PostCSS Preset Env](https://preset-env.cssdb.org) to process your CSS
