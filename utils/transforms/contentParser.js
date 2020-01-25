@@ -8,9 +8,7 @@ module.exports = function(value, outputPath) {
     /**
      * create the document model
      */
-    const DOM = new JSDOM(value, {
-      resources: 'usable',
-    })
+    const DOM = new JSDOM(value)
     const document = DOM.window.document
 
     /**
@@ -37,7 +35,7 @@ module.exports = function(value, outputPath) {
            * Set figcaption content from image title
            * then remove the title attribute
            */
-          figCaption.innerHTML = image.getAttribute('title')
+          figCaption.innerHTML = `<small>${image.getAttribute('title')}</small>`
           image.removeAttribute('title')
           /**
            * Clone image inside figure
@@ -90,6 +88,7 @@ module.exports = function(value, outputPath) {
     if (articleEmbeds.length) {
       articleEmbeds.forEach(embed => {
         const wrapper = document.createElement('div')
+        embed.setAttribute('loading', 'lazy')
         wrapper.classList.add(eleventyConfig.iframesClass)
         wrapper.appendChild(embed.cloneNode(true))
         embed.replaceWith(wrapper)
