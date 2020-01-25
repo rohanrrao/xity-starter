@@ -8,6 +8,8 @@
   "maxPostsPerPage": 5,
   "paymentPointer": "$twitter.xrptipbot.com/equinusocio",
   "syntaxTheme": "prism-material-light.css",
+  "permalinkClass": "permalink",
+  "iframesClass": "iframes-wrapper",
   "paths": {
     "src": "src",
     "blogdir": "blog",

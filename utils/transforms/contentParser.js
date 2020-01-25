@@ -1,6 +1,7 @@
 const jsdom = require('@tbranyen/jsdom')
 const { JSDOM } = jsdom
 const slugify = require('slugify')
+const eleventyConfig = require('../../src/_data/config.json')
 
 module.exports = function(value, outputPath) {
   if (outputPath.endsWith('.html')) {
@@ -73,7 +74,7 @@ module.exports = function(value, outputPath) {
         // Set the anchor href based on the generated slug
         anchor.setAttribute('href', `#${headingSlug}`)
         // Add class and content to the anchor
-        anchor.classList.add('permalink')
+        anchor.classList.add(eleventyConfig.permalinkClass)
         anchor.innerHTML = '#'
         // Set the ID attribute with the slug
         heading.setAttribute('id', `${headingSlug}`)
@@ -89,7 +90,20 @@ module.exports = function(value, outputPath) {
     if (articleEmbeds.length) {
       articleEmbeds.forEach(embed => {
         const wrapper = document.createElement('div')
-        wrapper.classList.add('iframes-wrapper')
+        wrapper.classList.add(eleventyConfig.iframesClass)
+        wrapper.appendChild(embed.cloneNode(true))
+        embed.replaceWith(wrapper)
+      })
+    }
+    /**
+     * Get all the code snippets and wrap them
+     * inside a div to apply custom style
+     */
+    const codeSnippets = [...document.querySelectorAll('pre[class^="language"')]
+    if (codeSnippets.length) {
+      codeSnippets.forEach(embed => {
+        const wrapper = document.createElement('div')
+        wrapper.classList.add('code-wrapper')
         wrapper.appendChild(embed.cloneNode(true))
         embed.replaceWith(wrapper)
       })

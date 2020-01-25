@@ -25,6 +25,8 @@ Here some key features:
 
 ⚠️ Custom 404 page layout
 
+📦 Custom blog posts parser to create `<pictures>` and wrap iframes
+
 <br style="line-height: 100px;" />
 
 ## What's next?
