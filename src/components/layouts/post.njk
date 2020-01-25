@@ -17,18 +17,6 @@
     <h1>{{ title }}</h1>
     <article>
       {{ content | safe }}
-      {% if tags %}
-        <footer>
-          <h2>Tags</h2>
-          <ul>
-            {% for item in tags %}
-              <li>
-                {{ item }}
-              </li>
-            {% endfor %}
-          </ul>
-        </footer>
-      {% endif %}
     </article>
   </main>
 {% endblock %}

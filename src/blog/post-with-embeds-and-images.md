@@ -1,14 +1,22 @@
 ---
-title: A post with code samples
-date: '2019-06-18'
+title: A post with embeds and images
+date: '2020-01-25'
 tags:
-  - demo-content
-  - code
-  - blog
+  - images
+  - content
+  - embeds
 ---
+
+This post contains iframe embedded elements that are wrapped inside a css class to let you to add custom style. Here's an example of a Codepen embed.
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="Border Radius Morphing" src="https://codepen.io/equinusocio/embed/jezBdZ?height=300&theme-id=10535&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/equinusocio/pen/jezBdZ'>Border Radius Morphing</a> by Mattia Astorino
+  (<a href='https://codepen.io/equinusocio'>@equinusocio</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
 The best way to demo a code post is to display a real life post, so check out this one from [andy-bell.design](https://andy-bell.design/wrote/creating-a-full-bleed-css-utility/) about a full bleed CSS utility.
 
-- - -
+---
 
 Sometimes you want to break your components out of the constraints that they find themselves in. A common situation where this occurs is when you don’t have much control of the container that it exists in, such as a CMS main content area.
 
@@ -37,7 +45,7 @@ Here it is in a context where it makes a fancy `<aside>` and a `<figure>` elemen
 
 The `.full-bleed` utility gives those elements prominence and _importantly_ keeps their semantic place in the page. Just how I like it.
 
-- - -
+---
 
 🔥 **Pro tip**: When working with a utility like `.full-bleed`, it’s a good idea to add an inner container that has a max-width and auto horizontal margin. For this, I normal create a shared `.wrapper` component like this:
 
@@ -49,9 +57,9 @@ The `.full-bleed` utility gives those elements prominence and _importantly_ keep
 }
 ```
 
-Having a container like `.wrapper` helps to create consistent, centred content.  
+Having a container like `.wrapper` helps to create consistent, centred content.
 
-- - -
+---
 
 ### How the `.full-bleed` utility works
 
