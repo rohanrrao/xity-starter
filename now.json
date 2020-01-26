@@ -9,13 +9,17 @@
   "github": {
     "silent": true
   },
+  "builds": [{
+    "src": "package.json",
+    "use": "@now/static-build",
+    "config": {
+      "distDir": "dist"
+    }
+  }],
   "build": {
     "env": {
       "ELEVENTY_ENV": "production"
     }
-  },
-  "functions": {
-    "includeFiles": "dist/"
   },
   "routes": [{
       "handle": "filesystem"
