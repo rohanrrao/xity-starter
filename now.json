@@ -21,9 +21,13 @@
       "ELEVENTY_ENV": "production"
     }
   },
-  "redirects": [{
-    "source": "/(.*)",
-    "destination": "/404.html",
-    "statusCode": 404
-  }]
+  "routes": [{
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/404.html"
+    }
+  ]
 }
