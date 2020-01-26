@@ -9,22 +9,21 @@
   "github": {
     "silent": true
   },
-  "functions": {
-    "runtime": "@now/static-build",
-    "includeFiles": "dist/**/*"
-  },
+  "builds": [{
+    "src": "package.json",
+    "use": "@now/static-build",
+    "config": {
+      "distDir": "dist"
+    }
+  }],
   "build": {
     "env": {
       "ELEVENTY_ENV": "production"
     }
   },
-  "routes": [{
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "status": 404,
-      "dest": "/404.html"
-    }
-  ]
+  "redirects": [{
+    "source": "/(.*)",
+    "destination": "/404.html",
+    "statusCode": 404
+  }]
 }
