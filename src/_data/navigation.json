@@ -13,6 +13,11 @@
       "text": "Sample Page",
       "url": "/sample-page/",
       "external": false
+    },
+    {
+      "text": "Github",
+      "url": "https://github.com/equinusocio/xity-starter",
+      "external": true
     }
   ]
 }

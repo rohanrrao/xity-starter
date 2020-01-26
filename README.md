@@ -1,4 +1,4 @@
-# XITY Starter
+![XITY Starter](https://repository-images.githubusercontent.com/234711727/72653800-4032-11ea-9b46-0b39dea20a22)
 
 A blog-ready 11ty starter based on PostCSS and Parcel, width RSS feed and Native Elements.
 
