@@ -1,0 +1,28 @@
+{
+  "name": "XITY Starter",
+  "version": 2,
+  "alias": [
+    "www.xity.now.sh",
+    "xity.now.sh"
+  ],
+  "scope": "equinusocio",
+  "builds": [{
+    "src": "nuxt.config.js",
+    "use": "@nuxtjs/now-builder",
+    "config": {
+      "serverFiles": ["lib/**", "plugins/**", ".env", ".env.build"]
+    }
+  }],
+  "github": {
+    "silent": true
+  },
+  "routes": [{
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/404.html"
+    }
+  ]
+}
