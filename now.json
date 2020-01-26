@@ -6,13 +6,6 @@
     "xity.now.sh"
   ],
   "scope": "equinusocio",
-  "builds": [{
-    "src": "nuxt.config.js",
-    "use": "@nuxtjs/now-builder",
-    "config": {
-      "serverFiles": ["lib/**", "plugins/**", ".env", ".env.build"]
-    }
-  }],
   "github": {
     "silent": true
   },
