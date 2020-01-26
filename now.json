@@ -9,13 +9,10 @@
   "github": {
     "silent": true
   },
-  "builds": [{
-    "src": "package.json",
-    "use": "@now/static-build",
-    "config": {
-      "distDir": "dist"
-    }
-  }],
+  "functions": {
+    "runtime": "@now/static-build",
+    "includeFiles": "dist/**/*"
+  },
   "build": {
     "env": {
       "ELEVENTY_ENV": "production"
