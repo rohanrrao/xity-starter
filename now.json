@@ -9,6 +9,14 @@
   "github": {
     "silent": true
   },
+  "build": {
+    "env": {
+      "ELEVENTY_ENV": "production"
+    }
+  },
+  "functions": {
+    "includeFiles": "dist/"
+  },
   "routes": [{
       "handle": "filesystem"
     },
