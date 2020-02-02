@@ -1,4 +1,4 @@
 [{
   "action": "remove",
-  "files": [".github", "now.json"]
+  "files": [".github", ".vscode"]
 }]
