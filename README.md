@@ -53,25 +53,35 @@ You can easily configure your site by changing the settings inside `src/_data/co
 {
   // Site name used as default site title
   "name": "Eleventy blog/site starter",
+
   // Short description used as default page description
   "shortDesc": "A starting point to make blogs and sites. It’s not a template.",
+
   // Default document language
   "lang": "en",
+
   // The default website base url
   "url": "localhost",
+
   // Social shares author username
   "authorHandle": "@equinusocio",
+
   // Social shares author name
   "authorName": "Mattia Astorino",
+
   // Tip payment url, if you want to monetize your site
   "paymentPointer": "$twitter.xrptipbot.com/equinusocio",
+
   // Code highlight theme, must reflect the file name inside /assets/css.
   // Remove to disable it
   "syntaxTheme": "prism-material-light.css",
+
   // CSS class applied to the "#" anchor elements inside headings
   "permalinkClass": "permalink",
+
   // CSS class applied to the iframes wrapper
   "iframesClass": "iframes-wrapper",
+
   // Filesystem folders. "blogdir" and "includes" must be children of "src"
   "paths": {
     "src": "src",
