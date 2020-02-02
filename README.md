@@ -82,7 +82,7 @@ You can easily configure your site by changing the settings inside `src/_data/co
   // CSS class applied to the iframes wrapper
   "iframesClass": "iframes-wrapper",
 
-  // Filesystem folders. "blogdir" and "includes" must be children of "src"
+  // Filesystem folders. "blogdir" and "includes" must be relative to "src"
   "paths": {
     "src": "src",
     "blogdir": "blog",
