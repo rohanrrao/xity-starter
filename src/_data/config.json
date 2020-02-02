@@ -5,7 +5,6 @@
   "lang": "en",
   "authorHandle": "@equinusocio",
   "authorName": "Mattia Astorino",
-  "maxPostsPerPage": 5,
   "paymentPointer": "$twitter.xrptipbot.com/equinusocio",
   "syntaxTheme": "prism-material-light.css",
   "permalinkClass": "permalink",
