@@ -2,6 +2,26 @@
 
 A blog-ready 11ty starter based on PostCSS and Parcel, width RSS feed and Native Elements.
 
+## Key features
+
+📰 Integrated RSS Feed.
+
+💅 [**PostCSS**](https://postcss.org) with [**Preset Env**](https://preset-env.cssdb.org) and [**CssNano**](https://cssnano.co) to enhance and clean your css.
+
+🏅 No <abbr title="Cascade Style Sheet">CSS</abbr> or <abbr title="Javascript">JS</abbr> frameworks to remove. Just add what you need.
+
+📝 Basic blog structure.
+
+⚙️ Configuration file to set meta data and global settings.
+
+🎨 Code highlight which you can disable with a flag.
+
+⚡️ Superpowered HTML elements with [**Native Elements**](https://native-elements.stackblitz.io).
+
+⚠️ Custom 404 page layout
+
+📦 Custom blog posts parser to create `<figure>` and wrap iframes
+
 ## Preconfigured development tools
 
 - [Eleventy](https://11ty.dev) for templates and site generation
