@@ -54,7 +54,7 @@ yarn install
 This command will run `parcel` and the local server (with [BrowserSync](https://www.npmjs.com/package/browser-sync)) with auto reload.
 
 ```bash
-yarn start
+yarn dev
 ```
 
 ### Distributing
