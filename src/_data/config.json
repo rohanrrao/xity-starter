@@ -9,6 +9,7 @@
   "syntaxTheme": "prism-material-light.css",
   "permalinkClass": "permalink",
   "iframesClass": "iframes-wrapper",
+  "codeClass": "code-wrapper",
   "paths": {
     "src": "src",
     "blogdir": "blog",

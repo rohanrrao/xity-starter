@@ -102,7 +102,7 @@ module.exports = function(value, outputPath) {
     if (codeSnippets.length) {
       codeSnippets.forEach(embed => {
         const wrapper = document.createElement('div')
-        wrapper.classList.add('code-wrapper')
+        wrapper.classList.add(eleventyConfig.codeClass)
         wrapper.appendChild(embed.cloneNode(true))
         embed.replaceWith(wrapper)
       })
