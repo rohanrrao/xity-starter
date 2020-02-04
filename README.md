@@ -106,6 +106,9 @@ You can easily configure your site by changing the settings inside `src/_data/co
   // CSS class applied to the iframes wrapper
   "iframesClass": "iframes-wrapper",
 
+  // CSS class applied to highlighted code snippets
+  "codeClass": "code-wrapper",
+
   // Filesystem folders. "blogdir" and "includes" must be relative to "src"
   "paths": {
     "src": "src",
