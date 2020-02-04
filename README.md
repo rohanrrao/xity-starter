@@ -47,7 +47,7 @@ You can download the scaffolding and start a new project with just one command:
 npx degit https://github.com/equinusocio/xity-starter
 ```
 
-This command will download the project to your corrent working directory and remove the `.github` and `.vscode` folders. Then you can install the required dependencies:
+This command will download the project to your current working directory and remove the `.github` and `.vscode` folders. Then you can install the required dependencies:
 
 ```bash
 yarn install
