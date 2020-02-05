@@ -1,3 +1,4 @@
+{% from "../postItem.njk" import postItem as postItem %}
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
@@ -9,7 +10,18 @@
 
     {% if showPosts %}
       {% set postList = collections.posts %}
-      {% include "posts.njk" %}
+      {% if collections.posts.length %}
+        <section>
+          <ol reversed>
+            {% for item in postList %}
+              {% if not loop.first %}
+                <hr/>
+              {% endif %}
+              {{ postItem(item.url, item.data.title, item.date) }}
+            {% endfor %}
+          </ol>
+        </section>
+      {% endif %}
     {% endif %}
 
     {{ content | safe }}
