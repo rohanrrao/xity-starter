@@ -33,6 +33,7 @@ A blog-ready 11ty starter based on PostCSS and Parcel, width RSS feed and Native
 - [CssNano](https://cssnano.co) to minimize, merge and optimize the CSS ouput
 - [Parcel JS](https://parceljs.org) for a simple asset build pipeline
 - [Turbolinks](https://github.com/turbolinks/turbolinks) makes navigating your web application faster
+- [What Input](https://github.com/ten1seven/what-input) to show outline only when navigating with keyboard
 
 ---
 
