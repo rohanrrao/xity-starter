@@ -18,7 +18,15 @@
     <article>
       {{ content | safe }}
     </article>
+    <hr />
+    <h5>Tags</h5>
+    {% if tags.length %}
+      <nav>
+      {% for tag in tags %}
+        <a href="/tag/{{tag}}">{{tag}}</a>
+      {% endfor %}
+      </nav>
+    {% endif %}
   </main>
 {% endblock %}
 
-{{ content | safe }}

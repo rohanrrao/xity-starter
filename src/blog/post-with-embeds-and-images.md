@@ -5,6 +5,7 @@ tags:
   - images
   - content
   - embeds
+  - code
 ---
 
 This post contains iframe embedded elements that are wrapped inside a css class to let you to add custom style. Here's an example of a Codepen embed.
