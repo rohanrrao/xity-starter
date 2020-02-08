@@ -6,19 +6,19 @@ A blog-ready 11ty starter based on PostCSS and Parcel, with a RSS feed and Nativ
 
 📰 Integrated RSS Feed.
 
-💅 **[PostCSS][]** with **[PostCSS Preset Env][]** and **[cssnano][]** to enhance and clean your css.
+💅 [PostCSS][] with [PostCSS Preset Env][] and [cssnano][] to enhance and clean your css.
 
 🏅 No <abbr title="Cascade Style Sheet">CSS</abbr> or <abbr title="JavaScript">JS</abbr> frameworks to remove. Just add what you need.
 
 📝 Basic blog structure.
 
-📦 Basic building with **[Parcel][]** bundler.
+📦 Basic building with [Parcel][] bundler.
 
 🎚 Configuration file to set meta data and global settings.
 
 🎨 Code highlights which you can disable with a flag.
 
-⚡️ Superpowered HTML elements with **[Native Elements][]**.
+⚡️ Superpowered HTML elements with [Native Elements][].
 
 ⚠️ Custom 404 page layout
 
