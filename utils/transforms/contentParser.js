@@ -107,6 +107,47 @@ module.exports = function(value, outputPath) {
         embed.replaceWith(wrapper)
       })
     }
+
+    /**
+     * Get all links with explicit href
+     * and add noopener rel value
+     */
+    const links = [...document.querySelectorAll('a[href]')]
+    if (links.length) {
+      links.forEach(link => {
+        /**
+         * For each link found get all the original attributes
+         * and apply them to the custom link element
+         */
+        const externalLink = document.createElement('a')
+        if (link.hasAttributes()) {
+          const linkAttributes = link.attributes
+          for (var i = linkAttributes.length - 1; i >= 0; i--) {
+            externalLink.setAttribute(
+              linkAttributes[i].name,
+              linkAttributes[i].value
+            )
+          }
+        }
+        /**
+         * If the link starts with http or https
+         * appen the "noopener" value to the rel attribute
+         */
+        const getHref = link.getAttribute('href')
+        const currentRel = link.getAttribute('rel')
+        const isExternal =
+          getHref.startsWith('http') || getHref.startsWith('https')
+        if (isExternal) {
+          externalLink.setAttribute(
+            'rel',
+            currentRel ? currentRel + ' noopener' : 'noopener'
+          )
+        }
+        externalLink.innerHTML = link.innerHTML
+        link.replaceWith(externalLink.cloneNode(true))
+      })
+    }
+
     return '<!DOCTYPE html>\r\n' + document.documentElement.outerHTML
   }
   return value
