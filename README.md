@@ -12,7 +12,7 @@ A blog-ready 11ty starter based on PostCSS and Parcel, with a RSS feed and Nativ
 
 📝 Basic blog structure.
 
-📦 Basic building with [Parcel][] bundler.
+📦 Basic building with **[Parcel][]** bundler.
 
 🎚 Configuration file to set meta data and global settings.
 
