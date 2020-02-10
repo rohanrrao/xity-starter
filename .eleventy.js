@@ -1,8 +1,9 @@
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight')
 const htmlMinTransform = require('./utils/transforms/htmlmin.js')
 const contentParser = require('./utils/transforms/contentParser.js')
 const htmlDate = require('./utils/filters/htmlDate.js')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
+const pwaPlugin = require('eleventy-plugin-pwa')
 const date = require('./utils/filters/date.js')
 const fs = require('fs')
 
@@ -53,7 +54,9 @@ module.exports = function(eleventyConfig) {
   // Add rss generation: https://github.com/11ty/eleventy-plugin-rss
   eleventyConfig.addPlugin(rssPlugin)
   // Add code syntax highlight: https://github.com/11ty/eleventy-plugin-syntaxhighlight
-  eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.addPlugin(syntaxHighlightPlugin)
+  // Generate service-worker: https://github.com/okitavera/eleventy-plugin-pwa
+  eleventyConfig.addPlugin(pwaPlugin)
 
   /**
    * Create custom data collections
