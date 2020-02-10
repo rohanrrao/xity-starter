@@ -12,7 +12,7 @@
   "scripts": {
     "clean": "run-s clean:*",
     "clean:cache": "rimraf ./.cache",
-    "clean:site": "rimraf ./dist",
+    "clean:dist": "rimraf ./dist",
     "build": "cross-env ELEVENTY_ENV=production run-s clean:* build:*",
     "build:html": "eleventy",
     "build:assets": "parcel build ./assets/css/app.pcss ./assets/js/app.js --out-dir ./dist/assets --no-source-maps",
