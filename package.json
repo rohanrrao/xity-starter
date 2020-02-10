@@ -1,6 +1,6 @@
 {
   "name": "xity-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A blog-ready 11ty starter based on PostCSS, width RSS feed and Native Elements.",
   "author": "Mattia Astorino",
   "main": "dist/assets/js/app.js",
