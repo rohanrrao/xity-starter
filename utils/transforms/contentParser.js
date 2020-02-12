@@ -140,7 +140,9 @@ module.exports = function(value, outputPath) {
         if (isExternal) {
           externalLink.setAttribute(
             'rel',
-            currentRel ? currentRel + ' noopener' : 'noopener'
+            currentRel && !currentRel.includes('noopener')
+              ? `${currentRel} noopener noreferrer`
+              : 'noopener noreferrer'
           )
         }
         externalLink.innerHTML = link.innerHTML
