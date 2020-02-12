@@ -72,7 +72,7 @@ module.exports = function(eleventyConfig) {
     return [
       ...collection
         .getFilteredByGlob(
-          `./${siteConfig.paths.src}/${siteConfig.paths.blogdir}/*.md`
+          `./${siteConfig.paths.src}/${siteConfig.paths.blogdir}/**/*`
         )
         .filter(livePosts),
     ].reverse()
