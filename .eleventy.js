@@ -44,18 +44,20 @@ module.exports = function(eleventyConfig) {
    * @link https://www.11ty.io/docs/config/#transforms
    */
   if (process.env.ELEVENTY_ENV === 'production') {
+    // Minify HTML when building for production
     eleventyConfig.addTransform('htmlmin', htmlMinTransform)
   }
+  // Parse the page HTML content and perform some manipulation
   eleventyConfig.addTransform('contentParser', contentParser)
 
   /**
    * Add Plugins
+   * @link https://github.com/11ty/eleventy-plugin-rss
+   * @link https://github.com/11ty/eleventy-plugin-syntaxhighlight
+   * @link https://github.com/okitavera/eleventy-plugin-pwa
    */
-  // Add rss generation: https://github.com/11ty/eleventy-plugin-rss
   eleventyConfig.addPlugin(rssPlugin)
-  // Add code syntax highlight: https://github.com/11ty/eleventy-plugin-syntaxhighlight
   eleventyConfig.addPlugin(syntaxHighlightPlugin)
-  // Generate service-worker: https://github.com/okitavera/eleventy-plugin-pwa
   eleventyConfig.addPlugin(pwaPlugin)
 
   /**
