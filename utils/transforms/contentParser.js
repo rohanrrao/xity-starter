@@ -3,6 +3,10 @@ const { JSDOM } = jsdom
 const slugify = require('slugify')
 const eleventyConfig = require('../../src/_data/config.json')
 
+function setClass(element, list) {
+  list.map(item => element.classList.add(item))
+}
+
 module.exports = function(value, outputPath) {
   if (outputPath.endsWith('.html')) {
     /**
@@ -38,6 +42,10 @@ module.exports = function(value, outputPath) {
           figCaption.innerHTML = `<small>${image.getAttribute('title')}</small>`
           image.removeAttribute('title')
           /**
+           * Add custom class to the figure elements inside posts
+           */
+          setClass(figure, eleventyConfig.figureClass)
+          /**
            * Clone image inside figure
            * and add the figcaption element
            */
@@ -72,7 +80,7 @@ module.exports = function(value, outputPath) {
         // Set the anchor href based on the generated slug
         anchor.setAttribute('href', `#${headingSlug}`)
         // Add class and content to the anchor
-        anchor.classList.add(eleventyConfig.permalinkClass)
+        setClass(anchor, eleventyConfig.permalinkClass)
         anchor.innerHTML = '#'
         // Set the ID attribute with the slug
         heading.setAttribute('id', `${headingSlug}`)
@@ -89,7 +97,7 @@ module.exports = function(value, outputPath) {
       articleEmbeds.forEach(embed => {
         const wrapper = document.createElement('div')
         embed.setAttribute('loading', 'lazy')
-        wrapper.classList.add(eleventyConfig.iframesClass)
+        setClass(wrapper, eleventyConfig.iframeClass)
         wrapper.appendChild(embed.cloneNode(true))
         embed.replaceWith(wrapper)
       })
@@ -102,7 +110,7 @@ module.exports = function(value, outputPath) {
     if (codeSnippets.length) {
       codeSnippets.forEach(embed => {
         const wrapper = document.createElement('div')
-        wrapper.classList.add(eleventyConfig.codeClass)
+        setClass(wrapper, eleventyConfig.codeClass)
         wrapper.appendChild(embed.cloneNode(true))
         embed.replaceWith(wrapper)
       })

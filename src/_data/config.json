@@ -7,9 +7,10 @@
   "authorName": "Mattia Astorino",
   "paymentPointer": "$twitter.xrptipbot.com/equinusocio",
   "syntaxTheme": "prism-material-light.css",
-  "permalinkClass": "permalink",
-  "iframesClass": "iframes-wrapper",
-  "codeClass": "code-wrapper",
+  "permalinkClass": ["permalink"],
+  "iframeClass": ["iframes-wrapper"],
+  "codeClass": ["code-wrapper"],
+  "figureClass": ["figure"],
   "paths": {
     "src": "src",
     "blogdir": "blog",
