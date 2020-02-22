@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@native-elements/core/dist/native-elements.min.css"/>
     <link rel="stylesheet" href="/assets/css/app.css"/>
     <script src="/assets/js/app.js" defer></script>
+    <script>
+      if ("serviceWorker" in navigator)
+        navigator
+          .serviceWorker
+          .register("/service-worker.js");
+    </script>
     {% block head %}{% endblock %}
   </head>
   <body>
