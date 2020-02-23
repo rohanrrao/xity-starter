@@ -8,7 +8,7 @@ title: Blog
 {% if collections.posts.length %}
   <section>
     <ol reversed>
-      {% for item in postList %}
+      {% for item in postList | reverse %}
         {% if not loop.first %}
           <hr/>
         {% endif %}

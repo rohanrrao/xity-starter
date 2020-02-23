@@ -15,7 +15,7 @@ permalink: /blog/tag/{{ tag | slug }}/
 
 <section style="margin-top: 80px">
   <ol reversed>
-    {% for post in collections[tag] %}
+    {% for post in collections[tag] | reverse %}
       {% if not loop.first %}
         <hr/>
       {% endif %}

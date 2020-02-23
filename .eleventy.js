@@ -75,7 +75,7 @@ module.exports = function(eleventyConfig) {
           `./${siteConfig.paths.src}/${siteConfig.paths.blogdir}/**/*`
         )
         .filter(livePosts),
-    ].reverse()
+    ]
   })
 
   /**
