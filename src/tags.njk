@@ -6,7 +6,7 @@ pagination:
   data: collections
   size: 1
   alias: tag
-permalink: /blog/tag/{{ tag }}/
+permalink: /blog/tag/{{ tag | slug }}/
 ---
 {% from "postItem.njk" import postItem %}
 
