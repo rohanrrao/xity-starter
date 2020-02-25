@@ -8,18 +8,19 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.6.0/modern-normalize.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@native-elements/core/dist/native-elements.min.css"/>
-    <link rel="stylesheet" href="/assets/css/app.css"/>
-    <script src="/assets/js/app.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/what-input@5.2.6/dist/what-input.min.js"></script>
+    <script src="/assets/js/app.js" defer></script>
     {% block head %}{% endblock %}
+    <style>{% include "../../../dist/assets/css/app.css" %}</style>
   </head>
   <body>
     {% block content %}{% endblock content %}
     <script>
-      if ("serviceWorker" in navigator)
-        navigator
-          .serviceWorker
-          .register("/service-worker.js");
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
     </script>
   </body>
 </html>
