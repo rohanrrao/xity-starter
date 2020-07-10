@@ -3,7 +3,6 @@
   "version": "1.1.1",
   "description": "A blog-ready 11ty starter based on PostCSS, width RSS feed and Native Elements.",
   "author": "Mattia Astorino",
-  "main": "dist/assets/js/app.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,10 +15,10 @@
     "clean:bundle": "rimraf ./bundle",
     "build": "cross-env ELEVENTY_ENV=production run-s clean:* build:assets build:html",
     "build:html": "eleventy",
-    "build:assets": "parcel build ./src/assets/css/app.pcss ./src/assets/js/app.js --out-dir ./bundle --no-source-maps",
+    "build:assets": "parcel build ./src/assets/css/app.pcss ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps",
     "watch": "cross-env ELEVENTY_ENV=development run-s clean:* build:assets && run-p serve watch:*",
-    "serve": "eleventy --incremental --serve --port=8080",
-    "watch:assets": "parcel watch ./src/assets/css/app.pcss ./src/assets/js/app.js --out-dir ./bundle --no-source-maps --no-hmr",
+    "serve": "eleventy --serve --port=8080",
+    "watch:assets": "parcel watch ./src/assets/css/app.pcss ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps --no-hmr",
     "dev": "yarn watch",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db"
@@ -45,7 +44,7 @@
   "devDependencies": {
     "cross-env": "7.0.2",
     "npm-run-all": "4.1.5",
-    "parcel-bundler": "1.12.4",
+    "parcel": "^2.0.0-beta.1",
     "postcss-cli": "7.1.1",
     "prettier": "2.0.5",
     "rimraf": "3.0.2"

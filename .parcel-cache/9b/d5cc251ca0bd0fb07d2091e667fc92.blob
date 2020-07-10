@@ -1,0 +1,10 @@
+"use strict";
+
+var _turbolinks = _interopRequireDefault(require("turbolinks"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Init Turbolinks within the site
+ */
+_turbolinks.default.start();
