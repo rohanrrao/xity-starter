@@ -18,7 +18,7 @@
     "build:html": "eleventy",
     "build:assets": "parcel build ./src/assets/css/app.pcss ./src/assets/js/app.js --out-dir ./bundle --no-source-maps",
     "watch": "cross-env ELEVENTY_ENV=development run-s clean:* build:assets && run-p serve watch:*",
-    "serve": "eleventy --serve --port=8080",
+    "serve": "eleventy --incremental --serve --port=8080",
     "watch:assets": "parcel watch ./src/assets/css/app.pcss ./src/assets/js/app.js --out-dir ./bundle --no-source-maps --no-hmr",
     "dev": "yarn watch",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
