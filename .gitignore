@@ -2,6 +2,7 @@
 .env*
 
 # caches
+.cache
 .parcel-cache
 
 # output
