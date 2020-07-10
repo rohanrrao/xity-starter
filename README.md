@@ -130,14 +130,14 @@ Here are the default settings you will get with this project structure:
   // Remove to disable it
   "syntaxTheme": "prism-material-light.css",
 
-  // CSS class applied to the "#" anchor elements inside headings
-  "permalinkClass": "permalink",
+  // CSS classes applied to the "#" anchor elements inside headings
+  "permalinkClass": ["permalink"],
 
-  // CSS class applied to the iframes wrapper
-  "iframesClass": "iframes-wrapper",
+  // CSS classes applied to the iframes wrapper
+  "iframesClass": ["iframes-wrapper"],
 
-  // CSS class applied to highlighted code snippets
-  "codeClass": "code-wrapper",
+  // CSS classes applied to highlighted code snippets
+  "codeClass": ["code-wrapper"],
 
   // Filesystem folders. "blogdir" and "includes" must be relative to "src"
   "paths": {
