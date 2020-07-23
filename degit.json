@@ -1,4 +1,4 @@
 [{
   "action": "remove",
-  "files": [".github", ".vscode"]
+  "files": [".github", ".vscode", "yarn.lock"]
 }]
