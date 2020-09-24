@@ -11,16 +11,11 @@
   },
   "scripts": {
     "clean": "run-s clean:*",
-    "clean:cache": "rimraf ./.cache",
-    "clean:dist": "rimraf ./dist",
-    "clean:bundle": "rimraf ./bundle",
-    "build": "cross-env ELEVENTY_ENV=production run-s clean:* build:assets build:html",
-    "build:html": "eleventy",
-    "build:assets": "parcel build ./src/assets/css/app.pcss ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps",
-    "watch": "cross-env ELEVENTY_ENV=development run-s clean:* build:assets && run-p serve watch:*",
-    "serve": "eleventy --serve --port=8080",
-    "watch:assets": "parcel watch ./src/assets/css/app.pcss ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps --no-hmr",
-    "dev": "yarn watch",
+    "predev": "yarn clean",
+    "build": "snowpack build",
+    "build:assets": "parcel build ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps",
+    "dev": "snowpack dev",
+    "watch:assets": "parcel watch ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps --no-hmr",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db"
   },
@@ -40,15 +35,18 @@
     "postcss-reporter": "6.0.1",
     "slugify": "1.4.5",
     "turbolinks": "5.2.0",
-    "what-input": "5.2.10"
+    "what-input": "^5.2.10"
   },
   "devDependencies": {
+    "@snowpack/plugin-postcss": "^1.0.4",
+    "@snowpack/plugin-run-script": "^2.1.2",
     "cross-env": "7.0.2",
     "npm-run-all": "4.1.5",
     "parcel": "^2.0.0-beta.1",
     "postcss-cli": "7.1.2",
     "prettier": "2.1.2",
-    "rimraf": "3.0.2"
+    "rimraf": "3.0.2",
+    "snowpack": "^2.11.1"
   },
   "browserslist": [
     "last 1 Chrome versions",

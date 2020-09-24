@@ -1,3 +1,4 @@
+import WhatInput from 'what-input'
 import Turbolinks from 'turbolinks'
 
 /**
