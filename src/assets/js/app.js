@@ -1,7 +1,8 @@
-import WhatInput from 'what-input'
+import 'what-input'
 import Turbolinks from 'turbolinks'
 
-/**
- * Init Turbolinks within the site
- */
 Turbolinks.start()
+
+document.addEventListener('turbolinks:load', () => {
+  console.log('cacca')
+})

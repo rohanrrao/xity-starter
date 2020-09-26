@@ -10,12 +10,8 @@
     "url": "https://github.com/equinusocio/xity-starter"
   },
   "scripts": {
-    "clean": "run-s clean:*",
-    "predev": "yarn clean",
     "build": "snowpack build",
-    "build:assets": "parcel build ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps",
     "dev": "snowpack dev",
-    "watch:assets": "parcel watch ./src/assets/js/app.js --dist-dir ./bundle --no-source-maps --no-hmr",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db"
   },
@@ -34,7 +30,7 @@
     "postcss-preset-env": "6.7.0",
     "postcss-reporter": "6.0.1",
     "slugify": "1.4.5",
-    "turbolinks": "5.2.0",
+    "turbolinks": "^5.2.0",
     "what-input": "^5.2.10"
   },
   "devDependencies": {
