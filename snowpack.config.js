@@ -15,6 +15,12 @@ module.exports = {
         watch: '$1 --watch',
       },
     ],
+    [
+      '@snowpack/plugin-optimize',
+      {
+        minify: true,
+      },
+    ],
   ],
   buildOptions: {
     clean: true,
@@ -23,7 +29,7 @@ module.exports = {
     out: 'dist',
     port: 3000,
     bundle: false,
-    open: 'default',
+    open: 'none',
     hmr: true,
   },
 }
