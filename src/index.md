@@ -13,7 +13,7 @@ title: XITY Starter
 - [PostCSS](https://postcss.org) with [Preset Env](https://preset-env.cssdb.org) and [CSSNano](https://cssnano.co) to enhance and clean your css.
 - No CSS or JS frameworks to remove. Just add what you need.
 - Basic blog structure.
-- Basic building with [Snowpack][https://www.snowpack.dev].
+- Basic building with [Snowpack](https://www.snowpack.dev).
 - Configuration file to set meta data and global settings.
 - Code highlight which can be disabled with a flag.
 - Superpowered HTML elements with [Native Elements](https://native-elements.stackblitz.io).
