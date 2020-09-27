@@ -7,11 +7,8 @@ title: Blog
 {% set postList = collections.posts %}
 {% if collections.posts.length %}
   <section>
-    <ol reversed>
+    <ol class="PostList" reversed>
       {% for item in postList | reverse %}
-        {% if not loop.first %}
-          <hr/>
-        {% endif %}
         {{ postItem(item.url, item.data.title, item.date) }}
       {% endfor %}
     </ol>
