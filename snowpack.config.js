@@ -9,8 +9,8 @@ module.exports = {
     [
       '@snowpack/plugin-run-script',
       {
-        cmd: 'ELEVENTY_ENV=production eleventy',
-        watch: 'ELEVENTY_ENV=development eleventy --watch',
+        cmd: 'eleventy',
+        watch: '$1 --watch',
       },
     ],
   ],
