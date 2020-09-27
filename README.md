@@ -66,7 +66,7 @@ npx degit equinusocio/xity-starter#main
 This command will download the project to your current working directory and remove the `.github` and `.vscode` folders. If you want to use the legacy version which use Parcel as bundler, change the branch at the end of the command:
 
 ```bash
-npx degit equinusocio/xity-starter#legacy
+npx degit equinusocio/xity-starter#parcel
 ```
 
 **Note: the legacy branch will not updated anymore and it will be deleted in the future.**
