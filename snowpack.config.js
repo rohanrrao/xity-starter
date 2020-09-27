@@ -6,6 +6,8 @@ module.exports = {
   },
   plugins: [
     '@snowpack/plugin-postcss',
+    ['@snowpack/plugin-optimize'],
+    ['@snowpack/plugin-webpack'],
     [
       '@snowpack/plugin-run-script',
       {
