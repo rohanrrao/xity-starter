@@ -66,9 +66,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rssPlugin)
   eleventyConfig.addPlugin(syntaxHighlightPlugin)
   eleventyConfig.addPlugin(pwaPlugin, {
-    globDirectory: '/',
     globPatterns: ['**/*.{png,ico,json,woff,woff2,jpg,jpeg,webp,html,js,css}'],
-    swDest: '/service-worker.js',
   })
 
   /**
