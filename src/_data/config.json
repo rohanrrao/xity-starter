@@ -15,6 +15,6 @@
     "src": "src",
     "blogdir": "blog",
     "includes": "components",
-    "output": "dist"
+    "output": ".11ty"
   }
 }

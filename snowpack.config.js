@@ -1,6 +1,6 @@
 module.exports = {
   mount: {
-    dist: '/',
+    '.11ty': '/',
     'src/assets/js': '/assets/js',
     'src/assets/css': '/assets/css',
   },

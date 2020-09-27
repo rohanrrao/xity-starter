@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
    *
    * @link https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
-  eleventyConfig.addWatchTarget('./bundle/')
+  // eleventyConfig.addWatchTarget('./bundle/')
 
   /**
    * Passthrough file copy
@@ -31,9 +31,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(
     `./src/assets/css/${siteConfig.syntaxTheme}`
   )
-  eleventyConfig.addPassthroughCopy({
-    bundle: 'assets',
-  })
+  // eleventyConfig.addPassthroughCopy({
+  //   bundle: 'assets',
+  // })
 
   /**
    * Add filters
