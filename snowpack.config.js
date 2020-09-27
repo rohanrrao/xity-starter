@@ -22,7 +22,8 @@ module.exports = {
   devOptions: {
     out: 'dist',
     port: 3000,
-    open: 'none',
+    bundle: false,
+    open: 'default',
     hmr: true,
   },
 }

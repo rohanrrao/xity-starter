@@ -10,10 +10,11 @@
     "url": "https://github.com/equinusocio/xity-starter"
   },
   "scripts": {
-    "clean": "rimraf ./dist",
-    "prebuild": "yarn clean",
+    "clean:dist": "rimraf ./dist",
+    "clean:eleventy": "rimraf ./.11ty",
+    "prebuild": "run-p clean:*",
     "build": "snowpack build",
-    "predev": "yarn clean",
+    "predev": "run-p clean:*",
     "dev": "snowpack dev",
     "update:deps": "yarn upgrade-interactive --latest && yarn upgrade",
     "update:cssdb": "npx browserslist@latest --update-db"
