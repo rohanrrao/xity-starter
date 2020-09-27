@@ -13,6 +13,12 @@ module.exports = {
         watch: '$1 --watch',
       },
     ],
+    /**
+     * Enable this plugin if you want to disable modules and
+     * use the classic js bundle. This is useful to target
+     * old  browsers
+     */
+    // ['@snowpack/plugin-webpack'],
     [
       '@snowpack/plugin-optimize',
       {
