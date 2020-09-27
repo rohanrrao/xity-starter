@@ -37,7 +37,6 @@
     "what-input": "^5.2.10"
   },
   "devDependencies": {
-    "@snowpack/plugin-optimize": "^0.2.1",
     "@snowpack/plugin-postcss": "1.0.4",
     "@snowpack/plugin-run-script": "2.1.2",
     "@snowpack/plugin-webpack": "^2.0.12",

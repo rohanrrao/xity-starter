@@ -11,11 +11,8 @@
 
      {% block head %}{% endblock %}
 
-    {% if env.IS_DEV %}
-      <link rel="stylesheet" href="/assets/css/app.css" />
-    {% else %}
-      <style>{% include "../../assets/css/app.css" %}</style>
-    {% endif %}
+    <link rel="stylesheet" href="/assets/css/app.css" />
+
 
     <script type="module" src="/assets/js/app.js" defer></script>
   </head>

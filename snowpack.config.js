@@ -1,12 +1,12 @@
 module.exports = {
   mount: {
     '.11ty': '/',
+    src: '/_dist_',
     'src/assets/js': '/assets/js',
     'src/assets/css': '/assets/css',
   },
   plugins: [
     '@snowpack/plugin-postcss',
-    ['@snowpack/plugin-optimize'],
     ['@snowpack/plugin-webpack'],
     [
       '@snowpack/plugin-run-script',

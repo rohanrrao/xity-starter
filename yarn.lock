@@ -1037,19 +1037,6 @@
     execa "^4.0.3"
     npm-run-path "^4.0.1"
 
-"@snowpack/plugin-optimize@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@snowpack/plugin-optimize/-/plugin-optimize-0.2.1.tgz#00862eeda14d6d2681fc11414ad42d97677fbb17"
-  integrity sha512-d/XxaSafJ8WmJruSzPibD9BsmadSS1H+CPq1l3/6Dan9VJYwZ+dOrqMbAKWNGdbsYniJED+HkLRR1r2jBUSr2A==
-  dependencies:
-    csso "^4.0.3"
-    es-module-lexer "^0.3.24"
-    esbuild "^0.6.28"
-    glob "^7.1.6"
-    html-minifier "^4.0.0"
-    kleur "^4.1.1"
-    p-queue "^6.6.1"
-
 "@snowpack/plugin-postcss@1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@snowpack/plugin-postcss/-/plugin-postcss-1.0.4.tgz#59a7e40bfb225525b4894d06d20d1205f476af0c"
@@ -2991,7 +2978,7 @@ cssnano@4.1.10, cssnano@^4.1.10:
     is-resolvable "^1.0.0"
     postcss "^7.0.0"
 
-csso@^4.0.2, csso@^4.0.3:
+csso@^4.0.2:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/csso/-/csso-4.0.3.tgz#0d9985dc852c7cc2b2cacfbbe1079014d1a8e903"
   integrity sha512-NL3spysxUkcrOgnpsT4Xdl2aiEiBG6bXswAABQVHcMrfjjBisFOKwLDOmf4wf32aPdcJws1zds2B0Rg+jqMyHQ==
