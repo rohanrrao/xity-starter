@@ -12,7 +12,7 @@ A blog-ready 11ty starter based on PostCSS and Snowpack, with a RSS feed and Nat
 
 📝 Basic blog structure.
 
-📦 Basic building with [Snowpack][].
+📦 Building with [Snowpack][] and web modules ready.
 
 🎚 Configuration file to set meta data and global settings.
 
