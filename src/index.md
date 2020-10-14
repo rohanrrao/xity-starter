@@ -1,9 +1,9 @@
 ---
 layout: 'home'
-title: XITY Starter
+title: Rohan Rao
 ---
 
-**XITY** (roman version of 11ty) is a basic starter blog/site built on top of Eleventy. You will find just some basic tools to start your project, no frameworks, no extra css and html, nothing to clean. **Just start from here**.
+An online scrapbook for logs and essays on my **climbing adventures and outdoor experiences** in general, with frequent effusions on **veganism, minimalism and sustainable living**.
 
 ---
 

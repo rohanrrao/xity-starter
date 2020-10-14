@@ -11,13 +11,13 @@
       "external": false
     },
     {
-      "text": "Sample Page",
-      "url": "/sample-page/",
+      "text": "About",
+      "url": "/about/",
       "external": false
     },
     {
-      "text": "GitHub",
-      "url": "https://github.com/equinusocio/xity-starter",
+      "text": "Drawings",
+      "url": "https://www.youtube.com/theartzombie",
       "external": true
     }
   ]

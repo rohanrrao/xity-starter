@@ -1037,7 +1037,7 @@
     execa "^4.0.3"
     npm-run-path "^4.0.1"
 
-"@snowpack/plugin-optimize@^0.2.1":
+"@snowpack/plugin-optimize@0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@snowpack/plugin-optimize/-/plugin-optimize-0.2.1.tgz#00862eeda14d6d2681fc11414ad42d97677fbb17"
   integrity sha512-d/XxaSafJ8WmJruSzPibD9BsmadSS1H+CPq1l3/6Dan9VJYwZ+dOrqMbAKWNGdbsYniJED+HkLRR1r2jBUSr2A==
@@ -1063,7 +1063,7 @@
     execa "^4.0.3"
     npm-run-path "^4.0.1"
 
-"@snowpack/plugin-webpack@^2.0.12":
+"@snowpack/plugin-webpack@2.0.12":
   version "2.0.12"
   resolved "https://registry.yarnpkg.com/@snowpack/plugin-webpack/-/plugin-webpack-2.0.12.tgz#44907f36542a35d326032108dcf9379e74bb0324"
   integrity sha512-kX7Jfgz5V/vwgtsrnGQNOguKqrGsEHmLAnHnTQ2WRKS7i90F1zb4UUoWqLgrH1cYdD1cdAhlfsXnl9ex3iI+7w==
@@ -6983,7 +6983,7 @@ postcss-replace-overflow-wrap@^3.0.0:
   dependencies:
     postcss "^7.0.2"
 
-postcss-reporter@6.0.1, postcss-reporter@^6.0.0:
+postcss-reporter@^6.0.0:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/postcss-reporter/-/postcss-reporter-6.0.1.tgz#7c055120060a97c8837b4e48215661aafb74245f"
   integrity sha512-LpmQjfRWyabc+fRygxZjpRxfhRf9u/fdlKf4VHG4TSPbV2XNsuISzYW1KL+1aQzx53CAppa1bKG4APIB/DOXXw==
@@ -8832,7 +8832,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-turbolinks@^5.2.0:
+turbolinks@5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/turbolinks/-/turbolinks-5.2.0.tgz#e6877a55ea5c1cb3bb225f0a4ae303d6d32ff77c"
   integrity sha512-pMiez3tyBo6uRHFNNZoYMmrES/IaGgMhQQM+VFF36keryjb5ms0XkVpmKHkfW/4Vy96qiGW3K9bz0tF5sK9bBw==
@@ -9200,7 +9200,7 @@ webpack@^4.43.0:
     watchpack "^1.7.4"
     webpack-sources "^1.4.1"
 
-what-input@^5.2.10:
+what-input@5.2.10:
   version "5.2.10"
   resolved "https://registry.yarnpkg.com/what-input/-/what-input-5.2.10.tgz#f79f5b65cf95d75e55e6d580bb0a6b98174cad4e"
   integrity sha512-7AQoIMGq7uU8esmKniOtZG3A+pzlwgeyFpkS3f/yzRbxknSL68tvn5gjE6bZ4OMFxCPjpaBd2udUTqlZ0HwrXQ==
